@@ -85,8 +85,9 @@ double Vec3D::dot(const Vec3D &vec) const {
 }
 
 Vec3D Vec3D::cross(const Vec3D &vec) const {
-    // TODO: implement (lesson 1)
-    return Vec3D();
+    return Vec3D(y() * vec.z() - vec.y() * z(),
+                 z() * vec.x() - vec.z() * x(),
+                 x() * vec.y() - vec.x() * y());
 }
 
 Vec4D Vec3D::makePoint4D() const {
